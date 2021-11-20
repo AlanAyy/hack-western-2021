@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { StyleSheet } from 'react-native'
 import { GiftedChat, IMessage, Reply, QuickReplies, User } from 'react-native-gifted-chat'
 import { renderBubble } from '../components/ChatBubble'
 
@@ -29,7 +28,8 @@ export default function AvaChat() {
     <GiftedChat
       messages={messages}
       renderBubble={renderBubble}
-      renderAvatar={null}
+      renderAvatar={() => { return (null) }}
+      renderTime={() => { return (null) }}
       onSend={messages => onSend(messages)}
       user={{
         _id: 1,

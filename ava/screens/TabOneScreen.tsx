@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
+import AvaModel from './AvaModel';
 import AvaChat from './AvaChat';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -14,6 +15,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
     //   <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     // </View>
     <View style={styles.avaChat}>
+      <AvaModel />
       <AvaChat />
     </View>
   )
