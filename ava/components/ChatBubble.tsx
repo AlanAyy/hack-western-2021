@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 
-import { Bubble } from 'react-native-gifted-chat'
+import { Bubble, BubbleProps, IMessage } from 'react-native-gifted-chat'
 
 const defaultPaddingLR = -8
 
-export const renderBubble = (props: any) => {
+export const renderBubble = (props: Readonly<BubbleProps<IMessage>>) => {
   return (
     <Bubble
       {...props}
@@ -27,7 +27,7 @@ const defaultBubble = {
 
   borderRadius: 50,
   paddingVertical: 12,
-  paddingHorizontal: 24,
+  paddingHorizontal: 12,
   textAlign: 'left',
 
   // shadowRadius: 10,
