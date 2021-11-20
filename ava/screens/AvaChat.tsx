@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { StyleSheet } from 'react-native'
 import { GiftedChat, IMessage, Reply, QuickReplies, User } from 'react-native-gifted-chat'
-import { renderBubble } from './GiftedChatCustom'
+import { renderBubble } from '../components/ChatBubble'
 
 export default function AvaChat() {
   const [messages, setMessages] = useState<IMessage[]>([]);
@@ -29,6 +29,7 @@ export default function AvaChat() {
     <GiftedChat
       messages={messages}
       renderBubble={renderBubble}
+      renderAvatar={null}
       onSend={messages => onSend(messages)}
       user={{
         _id: 1,
@@ -36,20 +37,3 @@ export default function AvaChat() {
     />
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
