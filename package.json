@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "expo-cli": "^4.13.0",
+    "material-components-web": "^13.0.0"
+  }
+}
