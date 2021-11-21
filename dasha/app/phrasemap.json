@@ -7,28 +7,64 @@
       "speed": 1
     },
 
-    "phrases": 
-    {
-      "greeting": 
-      {
-        "first":
-      [
-        { "text": "Hi there " },
-        { "id": "name", "type": "dynamic" },
-        { "text": "! I'm Ava. How can I help you?" }
-      ],
-      "repeat":
-      [
-        {"text": "Is there anything I can help you with? " },
-        {"id": "name", "type": "dynamic" }
+    "phrases": {
+      "greeting": {
+        "first": [
+          { "text": "Hi there " },
+          { "id": "name", "type": "dynamic" },
+          { "text": "! I'm Ava. How can I help you?" }
+        ],
+        "repeat":[
+          {"text": "Is there anything I can help you with? " }
         ]
-    },
+      },
+
+      "loan": [
+        { "text": "I see that you're looking for a loan." },
+        { "text": "Before we get started, let's grab some basic information from you." }
+      ],
+      "age": [
+        { "text": "How old are you?" }
+      ],
+      "degree": [
+        { "text": "Do you have, or are currently working towards, a post-secondary degree?" }
+      ],
+      "income": [
+        { "text": "How much is your income, or co-applicant income?" }
+      ],
+      "borrow": [
+        { "text": "How much are you looking to borrow?" }
+      ],
+      "loan_type": [
+        { "text": "What kind of loan are you interested in?" }
+      ],
+      "credit_score": [
+        { "text": "Have you started building a credit score?" }
+      ],
+      "months": [
+        { "text": "How long would your term be? In months."}
+      ],
+      "loan_assess": [
+        { "text": "Please hold. I'm assessing your loan request for you!"}
+      ],
+      "loan_approved": [
+        { "text": "Lol imagine getting your loan approved" }
+      ],
+      "loan_rejected": [
+        { "text": "Thanks for waiting. Unfortunately, you do not qualify for a loan right now." }
+      ],
+      "tips": [
+        { "text": "Would you like to receive more tips on loan requests?" }
+      ],
+
 
       "bye": [
         { "text": "Thank you for using Ava Assist "},
         { "id": "name", "type": "dynamic" },
         { "text": "! Have a nice day."}
       ],
+
+
 
       "yes": 
       {
@@ -108,9 +144,16 @@
     {
       "loan": {},
       "age": {},
-      "number": {},
+      "degree": {},
+      "income": {},
+      "borrow": {},
       "loan_type": {},
+      "credit_score": {},
       "months": {},
+      "loan_assess": {},
+      "loan_approved": {},
+      "loan_rejected": {},
+      "tips": {},
 
 
       "greeting": {},
