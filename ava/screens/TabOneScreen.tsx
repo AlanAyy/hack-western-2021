@@ -14,7 +14,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
     //   <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     //   <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     // </View>
-    <View style={styles.avaChat}>
+    <View style={styles.ava}>
       <AvaModel />
       <AvaChat />
     </View>
@@ -22,7 +22,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 }
 
 const styles = StyleSheet.create({
-  avaChat: {
+  ava: {
     flex: 1,
     backgroundColor: '#0f2573',
   },
