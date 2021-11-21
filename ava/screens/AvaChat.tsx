@@ -1,8 +1,10 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { View, StyleSheet } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { GiftedChat, IMessage, Reply, QuickReplies, User } from 'react-native-gifted-chat'
+
 import { renderBubble } from '../components/ChatBubble'
-import FadingEdge from 'react-native-fading-edge'
+import { storeMessage } from '../hooks/fileIO'
 
 const avaBackgroundColor = '#0f2573'
 
@@ -17,15 +19,14 @@ export default function AvaChat() {
         createdAt: new Date(),
         user: {
           _id: 2,
-          //   name: 'React Native',
-          //   avatar: '../images/favicon.png',
         },
       },
     ])
   }, [])
 
-  const onSend = useCallback((messages = []) => {
+  const onSend = useCallback(async (messages = []) => {
     setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+    storeMessage(messages[0])
   }, [])
 
   return (

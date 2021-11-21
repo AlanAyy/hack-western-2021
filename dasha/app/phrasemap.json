@@ -15,14 +15,20 @@
       [
         { "text": "Hi there " },
         { "id": "name", "type": "dynamic" },
-        { "text": "! Can you hear me? " }
+        { "text": "! I'm Ava. How can I help you?" }
       ],
       "repeat":
       [
-        {"text": "I was just saying, can you hear me " },
+        {"text": "Is there anything I can help you with? " },
         {"id": "name", "type": "dynamic" }
         ]
     },
+
+      "bye": [
+        { "text": "Thank you for using Ava Assist "},
+        { "id": "name", "type": "dynamic" },
+        { "text": "! Have a nice day."}
+      ],
 
       "yes": 
       {
@@ -100,9 +106,17 @@
     "types": {},
     "macros": 
     {
+      "loan": {},
+      "age": {},
+      "number": {},
+      "loan_type": {},
+      "months": {},
+
+
       "greeting": {},
       "yes": {},
       "no": {},
+      "bye": {},
       "i_will_call_back": {},
       "see_you_soon": {},
       "hello": {},
