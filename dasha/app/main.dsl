@@ -32,7 +32,95 @@ start node root
 }
 
 node loan {
+    do {
+        #say("loan");
+        #say("age");
+        wait *;
+    }
+    transitions {
+        degree: goto degree on #messageHasIntent("age");
+    }
+}
 
+node degree {
+    do {
+        #say("degree");
+        wait *;
+    }
+    transitions {
+        yes: goto income on #messageHasIntent("yes");
+        no: goto income on #messageHasIntent("no");
+    }
+}
+
+node income {
+    do {
+        #say("income");
+        wait *;
+    }
+    transitions {
+        borrow: goto borrow on #messageHasIntent("money");
+    }
+}
+
+node borrow {
+    do {
+        #say("borrow");
+        wait *;
+    }
+    transitions {
+        loan_type: goto loan_type on #messageHasIntent("money");
+    }
+}
+
+node loan_type {
+    do {
+        #say("loan_type");
+        wait *;
+    }
+    transitions {
+        credit_score: goto credit_score on #messageHasIntent("loan_type");
+    }
+}
+
+node credit_score {
+    do {
+        #say("credit_score");
+        wait *;
+    }
+    transitions {
+        yes: goto months on #messageHasIntent("yes");
+        no: goto months on #messageHasIntent("no");
+    }
+}
+
+node months {
+    do {
+        #say("months");
+        wait *;
+    }
+    transitions {
+        calculate: goto calculate on #messageHasIntent("months");
+    }
+}
+
+node calculate {
+    do {
+        #say("loan_assess");
+        #say("loan_rejected");
+        #say("tips");
+        wait *;
+    }
+    transitions {
+        bye: goto bye on #messageHasIntent("yes");
+    }
+}
+
+node bye {
+    do {
+        #say("bye");
+        exit;
+    }
 }
 
 digression bye {

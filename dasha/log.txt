@@ -11,68 +11,40 @@ ai: Hi there ! I'm Ava. How can I help you?
       "end": 3
     },
     "intent": null,
-    "state": "neutral",
+    "state": "positive",
     "sentenceType": "statement"
   },
   {
     "type": "Intent",
-    "skill": "9fcd79e11df59f7a1b721a00177a153b:v2",
-    "weight": 0.92368,
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.9996,
     "likelihood": 1,
     "location": {
       "start": -1,
       "end": -1
     },
-    "intent": "bye",
+    "intent": "loan",
     "state": "positive",
     "sentenceType": "statement"
   }
 ]
-human: they get loan advice
-ai: Sorry, could you say it again?
+human: i need a loan
+ai: I see that you're looking for a loan.Before we get started, let's grab some basic information from you.
+ai: How old are you?
 [
   {
-    "type": "Intent",
-    "skill": "common_phrases",
-    "weight": -1,
-    "likelihood": -1,
-    "location": {
-      "start": 0,
-      "end": 3
-    },
-    "intent": "are_you_a_robot",
-    "state": "positive",
-    "sentenceType": "question"
-  },
-  {
-    "type": "Intent",
-    "skill": "sentiment",
-    "weight": -1,
-    "likelihood": -1,
-    "location": {
-      "start": 0,
-      "end": 3
-    },
-    "intent": null,
-    "state": "neutral",
-    "sentenceType": "statement"
-  }
-]
-human: Are you a robot?
-ai: Actually I am an advanced AI. Just don't tell my boss or I'll be out of a job.
-[
-  {
-    "type": "Intent",
-    "skill": "common_phrases",
+    "type": "Data",
+    "skill": "common-numbers",
     "weight": -1,
     "likelihood": -1,
     "location": {
       "start": 0,
       "end": 0
     },
-    "intent": "bye",
-    "state": "positive",
-    "sentenceType": "statement"
+    "factType": "numberword",
+    "data": {
+      "value": "20"
+    }
   },
   {
     "type": "Intent",
@@ -89,33 +61,77 @@ ai: Actually I am an advanced AI. Just don't tell my boss or I'll be out of a jo
   },
   {
     "type": "Intent",
-    "skill": "9fcd79e11df59f7a1b721a00177a153b:v2",
-    "weight": 0.99995,
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.64542,
     "likelihood": 1,
     "location": {
       "start": -1,
       "end": -1
     },
-    "intent": "bye",
+    "intent": "age",
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.79134,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "months",
     "state": "positive",
     "sentenceType": "statement"
   }
 ]
-human: bye
-ai: Sorry, the connection dropped for a second. Could you say that again?
+human: 20
+ai: Do you have, or are currently working towards, a post-secondary degree?
 [
   {
     "type": "Intent",
-    "skill": "common_phrases",
+    "skill": "sentiment",
     "weight": -1,
     "likelihood": -1,
     "location": {
       "start": 0,
-      "end": 2
+      "end": 0
     },
-    "intent": "bye",
+    "intent": null,
     "state": "positive",
     "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.98615,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: yes
+ai: How much is your income, or co-applicant income?
+[
+  {
+    "type": "Data",
+    "skill": "common-numbers",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "factType": "numberword",
+    "data": {
+      "value": "0"
+    }
   },
   {
     "type": "Intent",
@@ -124,7 +140,7 @@ ai: Sorry, the connection dropped for a second. Could you say that again?
     "likelihood": -1,
     "location": {
       "start": 0,
-      "end": 2
+      "end": 0
     },
     "intent": null,
     "state": "neutral",
@@ -132,17 +148,196 @@ ai: Sorry, the connection dropped for a second. Could you say that again?
   },
   {
     "type": "Intent",
-    "skill": "9fcd79e11df59f7a1b721a00177a153b:v2",
-    "weight": 0.90877,
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.94457,
     "likelihood": 1,
     "location": {
       "start": -1,
       "end": -1
     },
-    "intent": "bye",
+    "intent": "money",
     "state": "positive",
     "sentenceType": "statement"
   }
 ]
-human: see you later
-ai: I'm sorry, let me transfer you to another agent. Please stand by!
+human: 0
+ai: How much are you looking to borrow?
+[
+  {
+    "type": "Data",
+    "skill": "common-numbers",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "factType": "numberword",
+    "data": {
+      "value": "100"
+    }
+  },
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.96389,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "money",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: 100K
+ai: What kind of loan are you interested in?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.98981,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "loan_type",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: student
+ai: Have you started building a credit score?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.98615,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: yes
+ai: How long would your term be? In months.
+[
+  {
+    "type": "Data",
+    "skill": "common-numbers",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "factType": "numberword",
+    "data": {
+      "value": "36"
+    }
+  },
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.90366,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "months",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: 36
+ai: Please hold. I'm assessing your loan request for you!
+ai: Thanks for waiting. Unfortunately, you do not qualify for a loan right now.
+ai: Would you like to receive more tips on loan requests?
+human: Yes.
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "40c4185858b4c0c1f443bfacf8f5c4f8:v2",
+    "weight": 0.97618,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]

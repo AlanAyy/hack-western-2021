@@ -29,8 +29,9 @@
         "30"
       ]
     },
-    "number": {
+    "money": {
       "includes": [
+        "dollars",
         "0",
         "0 dollars",
         "50",
