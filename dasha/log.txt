@@ -1,6 +1,79 @@
 ####################################################################################################
-ai: Hi there ! Can you hear me? 
+ai: Hi there ! I'm Ava. How can I help you?
 [
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 3
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "9fcd79e11df59f7a1b721a00177a153b:v2",
+    "weight": 0.92368,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "bye",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: they get loan advice
+ai: Sorry, could you say it again?
+[
+  {
+    "type": "Intent",
+    "skill": "common_phrases",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 3
+    },
+    "intent": "are_you_a_robot",
+    "state": "positive",
+    "sentenceType": "question"
+  },
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 3
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  }
+]
+human: Are you a robot?
+ai: Actually I am an advanced AI. Just don't tell my boss or I'll be out of a job.
+[
+  {
+    "type": "Intent",
+    "skill": "common_phrases",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": "bye",
+    "state": "positive",
+    "sentenceType": "statement"
+  },
   {
     "type": "Intent",
     "skill": "sentiment",
@@ -11,22 +84,65 @@ ai: Hi there ! Can you hear me?
       "end": 0
     },
     "intent": null,
-    "state": "positive",
+    "state": "neutral",
     "sentenceType": "statement"
   },
   {
     "type": "Intent",
     "skill": "9fcd79e11df59f7a1b721a00177a153b:v2",
-    "weight": 0.9999,
+    "weight": 0.99995,
     "likelihood": 1,
     "location": {
       "start": -1,
       "end": -1
     },
-    "intent": "yes",
+    "intent": "bye",
     "state": "positive",
     "sentenceType": "statement"
   }
 ]
-human: yep
-ai: Great! And I can hear you too. Bye!
+human: bye
+ai: Sorry, the connection dropped for a second. Could you say that again?
+[
+  {
+    "type": "Intent",
+    "skill": "common_phrases",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 2
+    },
+    "intent": "bye",
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 2
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "9fcd79e11df59f7a1b721a00177a153b:v2",
+    "weight": 0.90877,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "bye",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: see you later
+ai: I'm sorry, let me transfer you to another agent. Please stand by!

@@ -2,6 +2,77 @@
   "version": "v2",
   "intents": 
   {
+    "loan": {
+      "includes": [
+        "loan",
+        "i need a loan",
+        "i'm looking for a loan",
+        "can i get a loan"
+      ]
+    },
+    "age": {
+      "includes": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ]
+    },
+    "number": {
+      "includes": [
+        "0",
+        "0 dollars",
+        "50",
+        "50 k",
+        "50 thousand dollars",
+        "100",
+        "100 k",
+        "100 thousand dollars",
+        "150",
+        "150 k",
+        "150 thousand dollars",
+        "200",
+        "200 k",
+        "200 thousand dollars"
+      ]
+    },
+    "loan_type": {
+      "includes": [
+        "credit",
+        "conventional",
+        "student"
+      ]
+    },
+    "months": {
+      "includes": [
+        "6",
+        "6 months",
+        "12",
+        "12 months",
+        "18",
+        "18 months",
+        "24",
+        "24 months",
+        "30",
+        "30 months",
+        "36",
+        "36 months"
+      ]
+    },
+
+
+
     "yes": 
     {
       "includes": [

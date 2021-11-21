@@ -17,36 +17,28 @@ external function function1(log: string): string;
 // lines 28-42 start node 
 start node root 
 {
-    do //actions executed in this node 
+    do
     {
         #connectSafe($phone); // connecting to the phone number which is specified in index.js that it can also be in-terminal text chat
         #waitForSpeech(1000); // give the person a second to start speaking 
         #say("greeting", {name: $name} ); // and greet them. Refer to phrasemap.json > "greeting" (line 12); note the variable $name for phrasemap use
         wait *;
     }
-    transitions // specifies to which nodes the conversation goes from here 
+    transitions
     {
-        yes: goto yes on #messageHasIntent("yes"); // feel free to modify your own intents for "yes" and "no" in data.json
-        no: goto no on #messageHasIntent("no"); 
+        loan: goto loan on #messageHasIntent("loan"); // feel free to modify your own intents for "yes" and "no" in data.json
+        // bye: goto bye on #messageHasIntent("no"); 
     }
 }
 
-// lines 73-333 are our perfect world flow
-node yes
-{
-    do 
-    {
-        var result = external function1("test");    //call your external function
-        #say("yes"); //call on phrase "question_1" from the phrasemap
-        exit;
-    }
+node loan {
+
 }
 
-node no
-{
-    do 
-    {
-        #say("no");
+digression bye {
+    conditions { on #messageHasIntent("bye"); }
+    do {
+        #say("bye");
         exit;
     }
 }
@@ -56,8 +48,29 @@ digression how_are_you
     conditions {on #messageHasIntent("how_are_you");}
     do 
     {
-        #sayText("I'm well, thank you!", repeatMode: "ignore"); 
+        #sayText("I'm doing great, thank you!", repeatMode: "ignore"); 
         #repeat(); // let the app know to repeat the phrase in the node from which the digression was called, when go back to the node 
         return; // go back to the node from which we got distracted into the digression 
     }
 }
+
+// node yes
+// {
+//     do 
+//     {
+//         var result = external function1("test");    //call your external function
+//         #say("yes"); //call on phrase "question_1" from the phrasemap
+//         exit;
+//     }
+// }
+
+// node bye
+// {
+//     do 
+//     {
+//         #say("no");
+//         exit;
+//     }
+// }
+
+
